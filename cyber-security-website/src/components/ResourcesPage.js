@@ -83,7 +83,7 @@ const ResourcesPage = () => {
           </a>
         </div>
         <div className="social-media">
-          <p>Follow us on social media for updates:</p>
+          <p class="Socials">Follow us on social media for updates:</p>
           <a href="https://twitter.com/CyberSecurity" target="_blank" rel="noopener noreferrer">Twitter</a> | 
           <a href="https://www.facebook.com/CyberSecurity" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
