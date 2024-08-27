@@ -7,7 +7,7 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-const NEWS_API_KEY = '4547ad67515b4bbc9eb957c3cdb95622'; // Replace with your News API key
+const NEWS_API_KEY = '4547ad67515b4bbc9eb957c3cdb95622';
 const NEWS_API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=technology&q=cybersecurity OR cybercrime&apiKey=${NEWS_API_KEY}`;
 
 app.get('/api/news', async (req, res) => {
@@ -17,7 +17,7 @@ app.get('/api/news', async (req, res) => {
       title: article.title,
       description: article.description,
       url: article.url,
-      urlToImage: article.urlToImage // Ensure this field is included
+      urlToImage: article.urlToImage
     }));
     res.json(articles);
   } catch (error) {
