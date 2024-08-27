@@ -1,0 +1,279 @@
+/* Base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto; /* Ensure overflow is set to auto for scrolling */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styles for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 10px; /* Rounded corners for the scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker thumb color on hover */
+}
+
+/* Scrollbar styles for Firefox */
+body {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and track colors */
+}
+
+/* Background animation */
+body {
+  background: linear-gradient(45deg, #1e3c72, #2a5298, #004d77, #003366);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  color: #ffffff; /* Light text color */
+  font-family: Arial, sans-serif;
+}
+
+/* Animated gradient background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Navbar styles */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Page styles */
+.landing-page, .data-leak-check-page, .about-us-page, .resources-page {
+  padding: 20px;
+}
+
+.news-page {
+  padding: 20px;
+}
+
+.news-page h2{
+  color:antiquewhite;
+
+}
+
+.news-page a{
+  color:antiquewhite;
+
+}
+
+.news-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+h2 {
+  margin: 10px 0;
+  color: #007bff; /* Highlight blue color */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* About Us Page */
+.about-us-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.team-section {
+  margin-top: 20px;
+}
+
+.team-member {
+  margin-bottom: 20px;
+}
+
+.team-member h3 {
+  margin: 0;
+  color: #007bff; /* Highlight blue color */
+}
+
+.team-member p {
+  margin: 5px 0;
+}
+
+.contact-section {
+  margin-top: 20px;
+}
+
+.contact-section p {
+  margin: 5px 0;
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.landing-page h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2.5rem; /* Larger font size for the main heading */
+}
+
+.landing-page h2 {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.5rem; /* Slightly smaller font size for subheading */
+}
+
+.landing-page a {
+  text-decoration: none;
+}
+
+.landing-page button {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for button */
+  font-size: 1rem; /* Button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.landing-page button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Resources Page Styles */
+.resources-page {
+  padding: 20px;
+  font-family: Arial, sans-serif; /* Set a clean, modern font */
+  background-color: #f4f4f4; /* Light background for the page */
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.tips {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tips img {
+  width: 30%; /* Increased size for better visibility */
+  max-width: 600px; /* Adjusted maximum width */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.tips p {
+  font-size: 1.2em; /* Slightly larger font for readability */
+  margin-top: 15px;
+  color: #555; /* Lighter text color for description */
+}
+
+.videos .video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center-align video items */
+}
+
+.video {
+  text-align: center; /* Center-align text below the thumbnail */
+  flex: 0 1 auto; /* Allow the video item to be as small as its content */
+}
+
+.video-thumbnail {
+  width: 100%; /* Thumbnail takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checklist, .tool, .event, .forum, .social-media, .resource, .glossary, .useful-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.checklist a, .tool a, .event a, .forum a, .social-media a, .resource a, .glossary a, .useful-links a {
+  flex: 1 1 calc(30% - 20px); /* Adjusted to allow for better spacing */
+  text-align: center; /* Center-align text inside links */
+  padding: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #007bff;
+  border-radius: 8px;
+  background-color: #fff; /* White background for clarity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.checklist a:hover, .tool a:hover, .event a:hover, .forum a:hover, .social-media a:hover, .resource a:hover, .glossary a:hover, .useful-links a:hover {
+  text-decoration: underline;
+  background-color: #e9ecef; /* Slightly darker background on hover */
+}
